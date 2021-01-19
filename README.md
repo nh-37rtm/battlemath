@@ -70,7 +70,7 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 ### fork notes 
 
 #### polling and WSL
-as pointed by the folowing issue ``https://github.com/microsoft/WSL/issues/4739`` polling do not work with WSL2 (in a mounted filesystem from windows only ?), as told by Soviut :
+as pointed by the folowing issue https://github.com/microsoft/WSL/issues/4739 polling do not work with WSL2 (in a mounted filesystem from windows only ?), as told by Soviut :
 > A workaround for anyone using Webpack or other tool that uses Chokidar under the hood; you can set an environment variable to use polling instead of listening for file events.
 > 
 > ```
