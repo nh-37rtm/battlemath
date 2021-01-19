@@ -12,6 +12,9 @@ import { reducer, initialState, types } from './AppReducer'
 
 import './App.css'
 import HeroSvg from './components/HeroSvg'
+import Hello from './components/Hello'
+import Hello2 from './components/Hello2'
+
 
 function App() {
   const [
@@ -63,8 +66,10 @@ function App() {
     <View
       style={[styles.root, { backgroundColor: activeTheme.backgroundColor }]}
     >
+      <Hello2 />
+      <Hello />
       <Text style={[styles.title, { color: activeTheme.textColor }]}>
-        Battle Math
+        Battle Math!
       </Text>
       <Picker
         selectedValue={mode}
