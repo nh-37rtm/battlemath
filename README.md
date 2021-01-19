@@ -66,3 +66,22 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+### fork notes 
+
+#### polling and WSL
+as pointed by the folowing issue ``https://github.com/microsoft/WSL/issues/4739`` polling do not work with WSL2 (in a mounted filesystem from windows only ?), as told by Soviut :
+> A workaround for anyone using Webpack or other tool that uses Chokidar under the hood; you can set an environment variable to use polling instead of listening for file events.
+> 
+> ```
+> CHOKIDAR_USEPOLLING=1
+> ```
+> 
+> I use this with Docker by putting it in a `.env` file that Docker Compose picks up when it starts. However, you should be able to prepend any start commands with this env as well.
+> 
+> ```
+> CHOKIDAR_USEPOLLING=1 npm start
+> ```
+> 
+> This isn't a great solution since it dramatically increases the resources the OS or Docker needs to consume in order to perform the polling and it will drain your laptop batteries way faster than actual file system event watching, but it works until WSL2 triggers those file system events.
+
